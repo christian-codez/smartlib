@@ -9,6 +9,7 @@ class Welcome extends MY_Controller {
 	 
 	public function index()
 	{
-		$this->load->view('front/index');
+			$this->data['libraries'] = $this->library->getLibraries();
+		$this->load->view('front/index', $this->data);
 	}
 }

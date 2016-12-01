@@ -1,1 +1,2 @@
-# smartlib
+# smartlib - A smart library system
+

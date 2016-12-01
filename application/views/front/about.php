@@ -113,66 +113,21 @@ $(window).load(function(){
 		<div class="page-title">
 			<h1>About<span> Us</span></h1>
 		</div><!-- Page Title -->
-				<p class="text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-				sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-				magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-				quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-				ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-				dolor in hendrerit in vulputate velit esse molestie consequat,
-				vel illum dolore eu feugiat nulla facilisis at vero eros et
-				accumsan et iusto odio dignissim qui blandit praesent luptatum
-				zzril delenit augue duis dolore te feugait nulla facilisi.
-				Nam liber tempor cum soluta nobis eleifend option congue
-				nihil imperdiet doming id quod mazim placerat facer possim
-				assum. Typi non habent claritatem insitam; est usus legentis
-				in iis qui facit eorum claritatem. Investigationes
-				demonstraverunt lectores legere me lius quod ii legunt saepius.
-				Claritas est etiam processus dynamicus, qui sequitur mutationem
-				consuetudium lectorum. Mirum est notare quam littera gothica,
-				quam nunc putamus parum claram, anteposuerit litterarum formas
-				humanitatis per seacula quarta decima et quinta decima. Eodem
-				modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
-				in futurum.</p>						
-				<blockquote>Dused pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget  blandit nunc tortor ucnibh. <span>Nullam mollis</span>. Ut justo.</blockquote>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-				sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-				magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-				quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-				ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-				dolor in hendrerit in vulputate velit esse molestie consequat,
-				vel illum dolore eu feugiat nulla facilisis at vero eros et
-				accumsan et iusto odio dignissim qui blandit praesent luptatum
-				zzril delenit augue duis dolore te feugait nulla facilisi.
-				Nam liber tempor cum soluta nobis eleifend option congue
-				nihil imperdiet doming id quod mazim placerat facer possim
-				assum. Typi non habent claritatem insitam; est usus legentis
-				in iis qui facit eorum claritatem. Investigationes
-				demonstraverunt lectores legere me lius quod ii legunt saepius.
-				Claritas est etiam processus dynamicus, qui sequitur mutationem
-				consuetudium lectorum. Mirum est notare quam littera gothica,
-				quam nunc putamus parum claram, anteposuerit litterarum formas
-				humanitatis per seacula quarta decima et quinta decima. Eodem
-				modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
-				in futurum.</p><p class="text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-				sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-				magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-				quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-				ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-				dolor in hendrerit in vulputate velit esse molestie consequat,
-				vel illum dolore eu feugiat nulla facilisis at vero eros et
-				accumsan et iusto odio dignissim qui blandit praesent luptatum
-				zzril delenit augue duis dolore te feugait nulla facilisi.
-				Nam liber tempor cum soluta nobis eleifend option congue
-				nihil imperdiet doming id quod mazim placerat facer possim
-				assum. Typi non habent claritatem insitam; est usus legentis
-				in iis qui facit eorum claritatem. Investigationes
-				demonstraverunt lectores legere me lius quod ii legunt saepius.
-				Claritas est etiam processus dynamicus, qui sequitur mutationem
-				consuetudium lectorum. Mirum est notare quam littera gothica,
-				quam nunc putamus parum claram, anteposuerit litterarum formas
-				humanitatis per seacula quarta decima et quinta decima. Eodem
-				modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
-				in futurum.</p>
+				<p class="text-justify">Smart Library is a system that allows users acquire information from various libraries in Windsor Canada. It makes use of data provided by Windsor open data catalogue to present the desired information to the user.The motivation for this project is due to the challenges that both new and existing residents in Windsor face in locating libraries within the city. The smart library system would help overcome this challenge by Providing library locations in Windsor,
+				Providing the operating hours of these libraries, Providing library contact information.</p>						
+				<blockquote>This was developed as part of the course requirement for Advanced software engineering topics in University of Windsor.</blockquote>
+                <p class="text-justify">The motivation for this project is due to the challenges that 
+                both new and existing residents in Windsor face in locating libraries within the city. 
+                The smart library system would help overcome this challenge by:
+ 					<ol>
+ 						<li>Providing library locations in Windsor.</li>
+ 						<li>Providing the operating hours of these libraries</li>
+ 						<li>Providing library contact information</li>
+ 					</ol>
+				
+					 
+					The system is compatible with different electronic devices ranging from smartphones, tablets, desktop computers and laptops
+			</p>
 		
 	</div>
 

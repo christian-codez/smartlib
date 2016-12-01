@@ -104,28 +104,6 @@ $(window).load(function(){
 <body>
 <div class="theme-layout">
 
-<div id="top-bar">
-	<div class="container">
-		<ul>
-			<li>
-				<i class="icon-home"></i>
-				425 Street Name, UK, London
-			</li>
-			<li>
-				<i class="icon-phone"></i>
-				(123) 456-7890
-			</li>
-			<li>
-				<i class="icon-envelope"></i>
-				contact@companymail.com
-			</li>
-		</ul> 
-		<div class="search-box">
-			<input class="submit-button" type="submit" value="" >
-			<input class="search-input" type="text" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';"  value="Search">
-		</div>
-	</div>
-</div><!--top bar-->
 	<?php $this->load->view("_partials/header");?>
 
 		
@@ -139,69 +117,24 @@ $(window).load(function(){
 			
 			<div class="col-md-5 col-sm-12">
 				<div class="footer-widget-title">
-					<h4><strong><span>Features</span></strong></h4>
+					<h4><strong><span>Discription</span></strong></h4>
 				</div>
 				<div class="footer_carousel">
 					<ul class="slides">
-						<li>
-							<div class="review">
-								<i>L</i><p class="text-justify"><span>orem</span> 
-							     	ipsum dolor sit amet, consectetuer adipiscing elit,
-									sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-									magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-									quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-									ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-									dolor in hendrerit in vulputate velit esse molestie consequat,
-									vel illum dolore eu feugiat nulla facilisis at vero eros et
-									accumsan et iusto odio dignissim qui blandit praesent luptatum
-									zzril delenit augue duis dolore te feugait nulla facilisi.
-									Nam liber tempor cum soluta nobis eleifend option congue
-									nihil imperdiet doming id quod mazim placerat facer possim
-									assum. Typi non habent claritatem insitam; est usus legentis
-									in iis qui facit eorum claritatem. Investigationes
-									demonstraverunt lectores legere me lius quod ii legunt saepius.
-									Claritas est etiam processus dynamicus, qui sequitur mutationem
-									consuetudium lectorum. Mirum est notare quam littera gothica,
-									quam nunc putamus parum claram, anteposuerit litterarum formas
-									humanitatis per seacula quarta decima et quinta decima. Eodem
-									modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
-									in futurum.
-								</p>
-							</div>						
-							<div class="from">
-								<h6>Admin Name</h6>
-								<span>Post</span>
-							</div>
-						</li>
+					
 						<li>
 							<div class="review text-justify">
 								<span>L</span><p><span>orem</span> 
-							     	ipsum dolor sit amet, consectetuer adipiscing elit,
-									sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-									magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-									quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-									ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-									dolor in hendrerit in vulputate velit esse molestie consequat,
-									vel illum dolore eu feugiat nulla facilisis at vero eros et
-									accumsan et iusto odio dignissim qui blandit praesent luptatum
-									zzril delenit augue duis dolore te feugait nulla facilisi.
-									Nam liber tempor cum soluta nobis eleifend option congue
-									nihil imperdiet doming id quod mazim placerat facer possim
-									assum. Typi non habent claritatem insitam; est usus legentis
-									in iis qui facit eorum claritatem. Investigationes
-									demonstraverunt lectores legere me lius quod ii legunt saepius.
-									Claritas est etiam processus dynamicus, qui sequitur mutationem
-									consuetudium lectorum. Mirum est notare quam littera gothica,
-									quam nunc putamus parum claram, anteposuerit litterarum formas
-									humanitatis per seacula quarta decima et quinta decima. Eodem
-									modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
-									in futurum.
+							     	This website is about showing the information of libraries in Windsor. For users, there are 
+							     	two ways to get libraries' data. The first one is that users are able to input specific
+							     	library name to get library data on the index page. The page would show the location marker
+							     	on the google map and provide other information below the map. Another option is that they 
+							        can click the link on the index page which call the library list page and then choose any
+							        library name to get the same information.
+							     	
 								</p>
 							</div>						
-							<div class="from">
-								<h6>Admin name</h6>
-								<span>Post</span>
-							</div>
+						
 						</li>
 					</ul>
 				</div>
@@ -215,13 +148,24 @@ $(window).load(function(){
 			     	
 				</div>
 				<div class="row">
-				    <strong><p class="text-success">Click <a href="<?= base_url()?>library">here</a> to view all the libraries</p></strong>
-					<form method="post"  action="<?= base_url()?>/library/singlelibrary">
-						<input name="name" class="form-control input-lg" placeholder="Enter your search keyword..." type="text" id="name" size="30" value="" /><br/>
-					    <input type="submit" class="form-button pull-right " value="Search" />
+				    <strong><p class="text-success">Click <a href="<?= base_url()?>library">here</a> to view all the libraries </p></strong>
+				    <span class="text-danger" id="info"></span>
+				     <?php $data = array('class' => 'deleteform');   ?>
+                     <?php echo form_open('library/singlelibrary',$data);?>
+
+						<input name="name" class="form-control input-lg" placeholder="Enter your search keyword..." list="librarylist" type="text" id="name" size="70"/>
+						<input type="hidden" name="source" value="1"/>
+						<datalist id="librarylist">
+						     <?php foreach ($libraries as $lib): ?>
+						     	<option value="<?= trim($lib['library']) ?>"></option>
+							  <?php endforeach ; ?>	
+						</datalist>
+						<br/>
+					    <input type="submit" id="search" class="form-button pull-right " value="Search" />
 					</form>
 				</div>
-				<div class="row" id="demo">
+				<div class="row">
+					<strong><p class="text-center text-danger"><i class="icon-envelope-alt"></i> <span  id="demo"></span></p></strong>
 					<br>
 					<div id="mapholder"></div>
 				</div>
@@ -243,46 +187,8 @@ $(window).load(function(){
 
 </script> 
 <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
-<script>
-		$(window).load(function(){
-			
-			getLocation();
-		});
-var x = document.getElementById("demo");
+<script src="<?= base_url() ?>resources/js/myjs/index.js" type="text/javascript"></script>
 
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition, showError);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
 
-function showPosition(position) {
-    var latlon = position.coords.latitude + "," + position.coords.longitude;
-
-    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
-    +latlon+"&zoom=14&size=600x300&sensor=false";
-    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
-    
-}
-
-function showError(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            x.innerHTML = "User denied the request for Geolocation."
-            break;
-        case error.POSITION_UNAVAILABLE:
-            x.innerHTML = "Location information is unavailable."
-            break;
-        case error.TIMEOUT:
-            x.innerHTML = "The request to get user location timed out."
-            break;
-        case error.UNKNOWN_ERROR:
-            x.innerHTML = "An unknown error occurred."
-            break;
-    }
-}
-</script>
 </body>
 </html>
