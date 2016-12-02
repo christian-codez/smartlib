@@ -71,7 +71,7 @@ function showError(error) {
 		var name = $("#name").val();
 		if(name.length < 1){
 			
-			    $("#info").text("Please enter a library name");
+			    $("#info").text("Please enter a library name").delay(2000).fadeOut(2000);
 				return false;
 		}
 	

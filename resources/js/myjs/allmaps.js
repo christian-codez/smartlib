@@ -28,7 +28,7 @@ var locations;
                      ['Nikola Budimir Memorial Resource Library',-83.02671616,42.26829665],
                      ['Forest Glade - Optimist Library',-82.91584705,42.3030678],
                      ['Sandwich Library',-83.07789316,42.29965953],
-                     ['Central Resource Library',-83.03431,42.31127001],
+                     ['Central Resource Library',-83.0343100035999,42.3112700129999],
                      ['Fontainbleau Library',-82.95323669,42.29525096],
                  ];
 

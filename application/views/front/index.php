@@ -117,7 +117,7 @@ $(window).load(function(){
 			
 			<div class="col-md-5 col-sm-12">
 				<div class="footer-widget-title">
-					<h4><strong><span>Discription</span></strong></h4>
+					<h4><strong><span>Description</span></strong></h4>
 				</div>
 				<div class="footer_carousel">
 					<ul class="slides">
@@ -149,7 +149,7 @@ $(window).load(function(){
 				</div>
 				<div class="row">
 				    <strong><p class="text-success">Click <a href="<?= base_url()?>library">here</a> to view all the libraries </p></strong>
-				    <span class="text-danger" id="info"></span>
+				    <h4 class="text-danger text-center" id="info"></h4>
 				     <?php $data = array('class' => 'deleteform');   ?>
                      <?php echo form_open('library/singlelibrary',$data);?>
 

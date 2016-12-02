@@ -1,22 +1,22 @@
 <?php
-                            
-                             $library = "";
-                             $url     = "";
-                             $address = "";
-                             $x       = "";
-                             $y       = "";
-                             
-                            foreach ($libinfo as $info){
-                               $library = $info['library'];
-                               $url     = $info['url'];
-                               $address = $info['address'];
-                               $x       = $info['x'];
-                               $y       = $info['y'];
-                               
-                             
-                            }
 
-                          ?>
+             $library = "";
+             $url     = "";
+             $address = "";
+             $x       = "";
+             $y       = "";
+        
+            foreach ($libinfo as $info){
+               $library = $info['library'];
+               $url     = $info['url'];
+               $address = $info['address'];
+               $x       = $info['x'];
+               $y       = $info['y'];
+               
+             
+            }
+
+   ?>
 <!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -67,7 +67,13 @@
                     
                     <!--col 2-->
                        <div class="col-md-8">
-                                        <span class="hidden" id="x"><?= $x?></span>
+                           
+                            <?php  if(empty($library)):  ?>
+                                  
+                             <h3 class="text-danger text-center">Oops, Library was not found!</h3>
+                                          
+                             <?php else: ?>
+                                    <span class="hidden" id="x"><?= $x?></span>
                                         <span class="hidden" id="y"><?= $y?></span>
                                         <div class="contact-info">
                                             <h3 class="sub-head"><?= strtoupper($library) ?> <span ><input class="cart-btn" type="button" id="routebtn" value="Show route" /></span></h3>
@@ -93,7 +99,9 @@
                                                 
                                             </ul>
                                         </div>
-                                    </div>  <!-- Contact Info -->
+                   
+                             <?php endif;?>
+                       </div>  <!-- Contact Info -->
                     <!--/ col 2-->
                   
                   
@@ -104,6 +112,7 @@
      </section>
 
 </div>
+	<?php $this->load->view("_partials/footer");?>
 
 
 <script src="https://maps.googleapis.com/maps/api/js"></script>
