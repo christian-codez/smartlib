@@ -1,4 +1,8 @@
 <?php
+
+/*
+* 
+*/
 class  LibraryModel extends CI_Model {
 	
 	
@@ -15,6 +19,7 @@ class  LibraryModel extends CI_Model {
              $query = $this->db->query(" SELECT * FROM $this->_table ORDER BY 'library' ASC");
              
              if($query->num_rows() > 0){
+                 
                  return $query->result_array();
                  
              }else{
@@ -90,8 +95,6 @@ class  LibraryModel extends CI_Model {
     
     		}
            
-           
-            
     }
         
         
